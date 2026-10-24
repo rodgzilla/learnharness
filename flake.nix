@@ -18,7 +18,7 @@
         url = "https://github.com/amosblomqvist/learnharness/releases/download/v${version}/LearnHarness-${version}-x86_64.AppImage";
         inherit (release) hash;
       };
-      contents = pkgs.appimageTools.extractType2 { inherit pname version src; };
+      contents = pkgs.appimageTools.extract { inherit pname version src; };
 
       learnharness = pkgs.appimageTools.wrapType2 {
         inherit pname version src;
